@@ -21,10 +21,10 @@ def lis_dic(ld):
                     rezultat['ukupno']['cijena'] +=  x['kolicina'] * x['cijena']
                 return rezultat
             else:
-                return print('error')
+                return 'error'
         else:
-            return print('error')
+            return 'error'
     else:
-        return print('error')
+        return 'error'
 
 print(lis_dic(lista_diksnerija))
