@@ -6,5 +6,5 @@
 def string_check(l):
     return [x for x in l if isinstance(x, str) and len(x) > 4] if all([isinstance(x, str) for x in l]) else "error" 
 
-lista = ['Pas', 'Macka', 'Stol', 1]
+lista = ['Pas', 'Macka', 'Stol']
 print(string_check(lista))
