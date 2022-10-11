@@ -12,11 +12,6 @@ def dic_list (l, d):
         if len(l) == len (d):
             if all([isinstance(x, int) for x in l]):
                 return {(k+1):(v if v in range(5, 10) else -1) for k,v in enumerate(l)}
-            else:
-                return 'error'
-        else:
-            return 'error'
-    else:
-        return 'error'
+    return 'error'
 
 print(dic_list(lista, rijecnik))
