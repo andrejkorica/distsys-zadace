@@ -11,6 +11,7 @@ import numpy as np
 import psutil as ps
 
 async def afun1():
+  
   lista = []
   for i in range(10):
     lista.append(np.random.normal(0, 0.1, 1000000))
@@ -21,8 +22,9 @@ async def afun2():
   return print("CPU:", ps.cpu_percent(10))
 
 async def main():
-  await afun1()
+  nekitask1 = ai.create_task(afun1())
   nekitask = ai.create_task(afun2())
+  await nekitask1
   await nekitask
   nekitask.result()
 ai.run(main())
